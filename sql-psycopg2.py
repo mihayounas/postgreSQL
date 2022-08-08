@@ -2,7 +2,7 @@ import psycopg2
 
 
 # connect to "chinook" database
-connection = psycopg2.connect(database="chinook")
+connection = psycopg2.connect(database='chinook')
 
 # build a cursor object of the database
 cursor = connection.cursor()
@@ -23,7 +23,7 @@ cursor = connection.cursor()
 # cursor.execute('SELECT * FROM "Album" WHERE "ArtistId" = %s', [51])
 
 # Query 6 - select all tracks where the composer is "Queen" from the "Track"
-cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Queen"])
+# cursor.execute('SELECT * FROM "Track" WHERE "Composer" = %s', ["Queen"])
 
 # fetch the results (multiple)
 results = cursor.fetchall()
